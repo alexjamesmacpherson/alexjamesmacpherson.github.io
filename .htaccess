@@ -1,0 +1,24 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^alexmacpherson\.uk
+RewriteRule ^(.*)$ http://www.alexmacpherson.uk/$1 [R=permanent,L]
+
+# Allow no .html:
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/$ $1.html
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/$ $1.php [L]
+
+# Force trailing slash:
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+
+# Deny direct access to files:
+RewriteCond %{HTTP_REFERER} !^http://www\.?alexmacpherson.uk [NC] 
+RewriteCond %{HTTP_REFERER} !^http://www\.?alexmacpherson.uk.*$ [NC] 
+RewriteRule \.(gif|jpg|png|txt|ico|js|css)$ /404.shtml [L]

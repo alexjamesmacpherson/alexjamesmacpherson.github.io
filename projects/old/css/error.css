@@ -1,0 +1,130 @@
+html, body {
+	overflow: hidden;
+}
+
+* {
+	-moz-box-sizing: border-box;
+}
+
+body {
+	background: #201818;
+	color: #eeeeee; text-shadow: 2px 2px 4px #281818;
+	font-family: 'Maven Pro', sans-serif;
+	/*font-family: 'Sigmar One', cursive;*/
+	width: 100%; height: 100%;
+	cursor: default;
+}
+
+video {
+	position: fixed;
+	top: 50%; left: 50%;
+	min-width: 100%; min-height: 100%;
+	width: auto; height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.invisible {
+	opacity: 0 ! important;
+}
+
+.smooth {
+	transition: all 1s cubic-bezier(0.85, 0, 0.35, 1.5);
+	-webkit-transition: all 1s cubic-bezier(0.85, 0, 0.35, 1.5);
+	-moz-transition: all 1s cubic-bezier(0.85, 0, 0.35, 1.5);
+	-o-transition: all 1s cubic-bezier(0.85, 0, 0.35, 1.5);
+}
+
+.no-js1, .no-js2, .no-js3 {
+	margin-top: -10px;
+	position: relative;
+	text-align: center;
+	left: 50%;
+	width: 80vw;
+	font-size: 40px;
+	transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+.no-js2 {
+	margin-top: 25px;
+	font-size: 22px;
+}
+
+.no-js3 {
+	margin-top: 23px;
+	font-size: 16px;
+}
+
+@media screen and (min-width: 0px)  {
+	body {
+		background: #201818 url("/img/shatner.gif") no-repeat center center fixed;
+		background-size: cover;
+	}
+	
+	.forbidden {
+		background: #201818 url("/img/khan.gif") no-repeat center center fixed;
+		background-size: cover;
+	}
+	
+	#bgvid {
+		display: none;
+	}
+	
+	#logo {
+		position: relative;
+		transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		left: 50%;
+		width: 200px; height: 200px;
+	}
+	
+	.err {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		width: 100%;
+		text-align: center;
+	}
+	
+	.err-title {
+		position: relative;
+		font-size: 40px;
+		bottom: -40px;
+	}
+	
+	.err-description {
+		position: relative;
+		font-size: 22px;
+		padding: 15px;
+		bottom: -40px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	body {
+		background: #201818;
+	}
+	
+	#bgvid {
+		display: block;
+	}
+	
+	#logo {
+		width: 300px; height: 300px;
+	}
+	
+	.err-title {
+		font-size: 70px;
+	}
+	
+	.err-description {
+		font-size: 36px;
+	}
+}

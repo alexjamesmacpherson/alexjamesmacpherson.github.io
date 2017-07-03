@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>404: Alex Macpherson</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<link href='https://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="/css/error.css">
+		
+		<script src="/js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/bodymovin.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/error.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="icon" href="/logo.ico" type="image/ico">
+		<link rel="shortcut icon" href="/logo.ico" type="image/ico">
+	</head>
+
+	<body>
+		<video autoplay poster="/img/shatner.jpg" id="bgvid" loop>
+			<source src="/img/shatner.webm" type="video/webm">
+			<source src="/img/shatner.mp4" type="video/mp4">
+		</video>
+		<div class="err">
+			<div class="moveable-high" style="width=100%; margin-bottom: -10px;">
+				<div id="logo">
+					<svg height="200" width="200" x="0px" y="0px" viewBox="0 0 600 600">
+						<style type="text/css">
+							.st0{clip-path:url(#SVGID_2_);fill:url(#SVGID_3_);}
+							.st1{clip-path:url(#SVGID_5_);fill:url(#SVGID_6_);}
+							.st2{clip-path:url(#SVGID_8_);fill:url(#SVGID_9_);}
+							.st3{fill:#FFFFFF;}
+						</style>
+						<path class="st3" d="M475,499.5l-99.6-199.2l-50.2,99.6L275,299.5l100-200l200,400H475z M325,499.5l-200-400L75.4,200.3l49.6,99.3H25L75.3,400l100.1,0.2l49.6,99.3H325z"/>
+					</svg>
+					<div class="no-js1">Oh Shatner!</div>
+					<div class="no-js2">Something went wrong - we can't find the thing (404)</div>
+					<div class="no-js3">You'll also need to enable JavaScript to access the rest of the site</div>
+				</div>
+			</div>
+			<div class="err-title smooth invisible">
+				<div class="moveable-med">Oh Shatner!</div>
+			</div>
+			<div class="err-description smooth invisible">
+				<div class="moveable">Something went wrong - we can't find the thing (404)</div>
+			</div>
+		</div>
+	</body>
+</html>
