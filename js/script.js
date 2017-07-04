@@ -193,16 +193,16 @@ $(window).on("load", function() {
 		}
 	/* Post some mail */
 		if(send) {
-			var formData = $form.serialize();
 			$inName.prop("disabled",true);
 			$inEmail.prop("disabled",true);
 			$inMessage.prop("disabled",true);
 			$inSubmit.prop("disabled",true);
 			$inSubmit.prop("value","Sending");
 			$.ajax({
-				type: 'POST',
-				url: $form.attr('action'),
-				data: formData
+				url: 'https://formspree.io/hello@alexmacpherson.uk',
+				method: 'POST',
+				data: $form.serialize(),
+				dataType: 'json'
 			})
 			.done(function(response) {
 				$inSubmit.prop("value","Message Sent");
