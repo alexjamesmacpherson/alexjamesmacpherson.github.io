@@ -371,11 +371,14 @@
 		</div>
 		<div class="right">
 			<div class="center">
-				<form action="/mail.php" method="post">
-					<input id="in-name" class="smooth-text droppable" type="text" name="name" placeholder="name">
-					<input id="in-email" class="smooth-text droppable" type="email" name="email" placeholder="email">
+				<form action="http://formspree.io/hello@alexmacpherson.uk" method="post">
+					<input type="text" name="_gotcha" style="display:none" />
+					<input type="hidden" name="_subject" value="A line has been dropped..." />
+					<input type="hidden" name="_format" value="plain" />
+					<input id="in-name" class="smooth-text droppable" type="text" name="name" placeholder="name" />
+					<input id="in-email" class="smooth-text droppable" type="email" name="_replyto" placeholder="email" />
 					<textarea id="in-message" class="smooth-text droppable" rows="5" name="message" placeholder="message"></textarea>
-					<input id="in-submit" class="smooth-text droppable" type="submit" value="Send Message">
+					<input id="in-submit" class="smooth-text droppable" type="submit" value="Send Message" />
 				</form>
 			</div>
 		</div>
