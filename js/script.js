@@ -204,7 +204,7 @@ $(window).on("load", function() {
 				url: 'https://formspree.io/hello@alexmacpherson.uk',
 				method: 'POST',
 				data: formData,
-				dataType: 'json',
+				dataType: 'json'
 			})
 			.done(function(response) {
 				$inSubmit.prop("value","Message Sent");
