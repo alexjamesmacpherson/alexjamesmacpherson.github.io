@@ -193,6 +193,8 @@ $(window).on("load", function() {
 		}
 	/* Post some mail */
 		if(send) {
+			var formData = $form.serialize();
+			console.log(formData);
 			$inName.prop("disabled",true);
 			$inEmail.prop("disabled",true);
 			$inMessage.prop("disabled",true);
@@ -201,8 +203,8 @@ $(window).on("load", function() {
 			$.ajax({
 				url: 'https://formspree.io/hello@alexmacpherson.uk',
 				method: 'POST',
-				data: $form.serialize(),
-				dataType: 'json'
+				data: formData,
+				dataType: 'json',
 			})
 			.done(function(response) {
 				$inSubmit.prop("value","Message Sent");
