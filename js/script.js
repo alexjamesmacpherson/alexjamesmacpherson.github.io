@@ -194,7 +194,6 @@ $(window).on("load", function() {
 	/* Post some mail */
 		if(send) {
 			var formData = $form.serialize();
-			console.log(formData);
 			$inName.prop("disabled",true);
 			$inEmail.prop("disabled",true);
 			$inMessage.prop("disabled",true);
