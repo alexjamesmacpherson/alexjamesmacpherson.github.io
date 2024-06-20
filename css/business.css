@@ -1,184 +1,184 @@
 html, body {
-	margin: 0;
-	left: 0;
-	top: 0;
-	background: #070814;
-	color: #f5f5f5;
-	font-family: 'Maven Pro', sans-serif;
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	-ms-text-size-adjust: none;
-	overflow: hidden;
+  margin: 0;
+  left: 0;
+  top: 0;
+  background: #070814;
+  color: #f5f5f5;
+  font-family: 'Maven Pro', sans-serif;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  overflow: hidden;
 }
 
 body {
-	background: #070814;
-	background: linear-gradient(top right, #22252c, #070814);
-	background: -webkit-linear-gradient(top right, #22252c, #070814);
-	background: -moz-linear-gradient(top right, #22252c, #070814);
-	background: -ms-linear-gradient(top right, #22252c, #070814);
-	background: -o-linear-gradient(top right, #22252c, #070814);
-	height:100vh;
+  background: #070814;
+  background: linear-gradient(top right, #22252c, #070814);
+  background: -webkit-linear-gradient(top right, #22252c, #070814);
+  background: -moz-linear-gradient(top right, #22252c, #070814);
+  background: -ms-linear-gradient(top right, #22252c, #070814);
+  background: -o-linear-gradient(top right, #22252c, #070814);
+  height:100vh;
 }
 
 .center-vh, #scrn-smol {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate3d(-50%,-50%,0);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
 }
 
 #no-js {
-	display: none;
+  display: none;
 }
 
 .invisible {
-	opacity: 0;
+  opacity: 0;
 }
 
 .smooth-text {
-	transition: all 0.5s ease-in-out;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 300px)  {
-	#scrn-smol {
-		display: none;
-	}
-	
-	#logo, #desc {
-		position:fixed;
-		left:50%;
-		top:45%;
-		transform:translate3d(-50%,-50%,0);
-		height:60vh;
-		width:60vw;
-	}
+  #scrn-smol {
+    display: none;
+  }
 
-	#desc {
-		cursor: pointer;
-		top:55%;
-		height:auto;
-		width:100%;
-		padding: 40px;
-		text-align:center;
-		font-size:12vh;
-		color:#e14658;
-		z-index:10;
-		font-weight:bold;
-		text-shadow:0 0 8vw #924;
-		animation: glow 2.3s infinite;
-		-webkit-animation: glow 2.3s infinite;
-		-moz-animation: glow 2.3s infinite;
-	}
+  #logo, #desc {
+    position:fixed;
+    left:50%;
+    top:45%;
+    transform:translate3d(-50%,-50%,0);
+    height:60vh;
+    width:60vw;
+  }
 
-	#mail {
-		position: fixed;
-		width: 100%;
-		bottom: 0;
-		padding:10px;
-		font-size:15px;
-		text-align: center;
-		z-index:100;
-	}
+  #desc {
+    cursor: pointer;
+    top:55%;
+    height:auto;
+    width:100%;
+    padding: 40px;
+    text-align:center;
+    font-size:12vh;
+    color:#e14658;
+    z-index:10;
+    font-weight:bold;
+    text-shadow:0 0 8vw #924;
+    animation: glow 2.3s infinite;
+    -webkit-animation: glow 2.3s infinite;
+    -moz-animation: glow 2.3s infinite;
+  }
 
-	a, a:link, a:visited, a:hover, a:active {
-		color:#e14658;
-		text-decoration: none;
-		text-shadow:0 0 2vw #924;
-		animation: glow 1.5s infinite;
-		-webkit-animation: glow 1.5s infinite;
-		-moz-animation: glow 1.5s infinite;
-	}
+  #mail {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding:10px;
+    font-size:15px;
+    text-align: center;
+    z-index:100;
+  }
 
-	a:hover {
-		color:#ff5678;
-		animation: glow-hover 2.3s infinite;
-		-webkit-animation: glow-hover 2.3s infinite;
-		-moz-animation: glow-hover 2.3s infinite;
-	}
+  a, a:link, a:visited, a:hover, a:active {
+    color:#e14658;
+    text-decoration: none;
+    text-shadow:0 0 2vw #924;
+    animation: glow 1.5s infinite;
+    -webkit-animation: glow 1.5s infinite;
+    -moz-animation: glow 1.5s infinite;
+  }
 
-	a:active, #desc:active {
-		color:#ff3668;
-		animation: glow 2.3s infinite;
-		-webkit-animation: glow 2.3s infinite;
-		-moz-animation: glow 2.3s infinite;
-	}
+  a:hover {
+    color:#ff5678;
+    animation: glow-hover 2.3s infinite;
+    -webkit-animation: glow-hover 2.3s infinite;
+    -moz-animation: glow-hover 2.3s infinite;
+  }
 
-	.typed-cursor{
-		opacity: 1;
-		font-weight: normal;
-		animation: blink 0.7s infinite;
-		-webkit-animation: blink 0.7s infinite;
-		-moz-animation: blink 0.7s infinite;
-	}
+  a:active, #desc:active {
+    color:#ff3668;
+    animation: glow 2.3s infinite;
+    -webkit-animation: glow 2.3s infinite;
+    -moz-animation: glow 2.3s infinite;
+  }
 
-	@keyframes blink {
-		50% { opacity:0; }
-	}
-	@-webkit-keyframes blink {
-		50% { opacity:0; }
-	}
-	@-moz-keyframes blink {
-		50% { opacity:0; }
-	}
+  .typed-cursor{
+    opacity: 1;
+    font-weight: normal;
+    animation: blink 0.7s infinite;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+  }
 
-	@keyframes glow {
-		50% { color:#ff3050; }
-	}
-	@-webkit-keyframes glow {
-		50% { color:#ff3050; }
-	}
-	@-moz-keyframes glow {
-		50% { color:#ff3050; }
-	}
+  @keyframes blink {
+    50% { opacity:0; }
+  }
+  @-webkit-keyframes blink {
+    50% { opacity:0; }
+  }
+  @-moz-keyframes blink {
+    50% { opacity:0; }
+  }
 
-	@keyframes glow-hover {
-		50% { color:#ff5088; }
-	}
-	@-webkit-keyframes glow-hover {
-		50% { color:#ff5088; }
-	}
-	@-moz-keyframes glow-hover {
-		50% { color:#ff5088; }
-	}
+  @keyframes glow {
+    50% { color:#ff3050; }
+  }
+  @-webkit-keyframes glow {
+    50% { color:#ff3050; }
+  }
+  @-moz-keyframes glow {
+    50% { color:#ff3050; }
+  }
+
+  @keyframes glow-hover {
+    50% { color:#ff5088; }
+  }
+  @-webkit-keyframes glow-hover {
+    50% { color:#ff5088; }
+  }
+  @-moz-keyframes glow-hover {
+    50% { color:#ff5088; }
+  }
 }
 
 @media screen and (max-aspect-ratio: 13/10) {
-	#desc {
-		font-size: 9vw;
-	}
+  #desc {
+    font-size: 9vw;
+  }
 }
 
 @media screen and (orientation: portrait) {
-	#logo {
-		top:42%;
-	}
-	#desc {
-		top: calc(42% + 30vw);
-		font-size: 8vw;
-		padding-right:25px;
-	}
+  #logo {
+    top:42%;
+  }
+  #desc {
+    top: calc(42% + 30vw);
+    font-size: 8vw;
+    padding-right:25px;
+  }
 }
 
 @media screen and (max-width: 299px) {
-	* {
-		display: none;
-	}
-	
-	html, body {
-		display: block;
-	}
-	
-	body {
-		display: block;
-	}
-	
-	#scrn-smol, .center-vh {
-		display: block;
-		text-align: center;
-		font-size: 20px;
-	}
+  * {
+    display: none;
+  }
+
+  html, body {
+    display: block;
+  }
+
+  body {
+    display: block;
+  }
+
+  #scrn-smol, .center-vh {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }
 }
