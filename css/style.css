@@ -149,7 +149,7 @@ address {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #ff2040;
+    background-color: #22252c;
   }
 
   .timeline-item:first-child::before {
@@ -172,13 +172,14 @@ address {
   .timeline .timeline-item h3::before {
     position: absolute;
     content: "";
-    left: -34px;
+    left: -36px;
     top: 50%;
     transform: translateY(-50%);
     height: 10px;
     width: 10px;
-    border-radius: 3px;
-    background-color: #ff2040;
+    border-radius: 4px;
+    background-color: #ff5678;
+    border: 2px solid #f5f5f5;
   }
 
   .left {
@@ -1551,7 +1552,7 @@ address {
 /* Desktop Large */
 @media screen and (min-width: 1400px) {
   .timeline {
-    margin-left: 20px;
+    margin-left: 15px;
   }
 
   .left, .right {
