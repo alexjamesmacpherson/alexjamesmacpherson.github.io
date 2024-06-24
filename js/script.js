@@ -6,6 +6,7 @@ var $dropRow = $(".drop-row");
 var dropPoint;
 var isScrolling = false;
 var scrollTime;
+var mobileBreakpoint = 1024;
 
 var $navbar = $("#navbar");
 var $navButs = $("li");
@@ -238,7 +239,7 @@ $window.scroll(function () {
 });
 $window.on("resize", function() {
   sizeSetter();
-  if(window.innerWidth >= 800) {
+  if(window.innerWidth >= mobileBreakpoint) {
     menuOpen = false;
     mobileMenuClose();
   }
@@ -249,12 +250,12 @@ $window.on("orientationchange", function() {
 document.body.className = 'ontouchstart' in document.documentElement ? '' : 'hover';
 
 function sizeSetter() {
-  scrollTime = window.innerWidth < 800 ? 0 : 1000;
-  fixedNav = window.innerWidth < 800 ? 0 : $navbar.outerHeight();
+  scrollTime = window.innerWidth < mobileBreakpoint ? 0 : 1000;
+  fixedNav = window.innerWidth < mobileBreakpoint ? 0 : $navbar.outerHeight();
   navHeight = Math.ceil($land.outerHeight() - fixedNav);
   aboutHeight = Math.ceil($about.offset().top);
   contactHeight = Math.ceil($contact.offset().top);
-  if(window.innerWidth >= 800) {
+  if(window.innerWidth >= mobileBreakpoint) {
     dropPoint = (9 * $window.height() / 10);
   } else {
     dropPoint = $window.height();
@@ -263,7 +264,7 @@ function sizeSetter() {
 }
 
 function scrollHandler() {
-  if(landAnimComplete && $window.scrollTop() >= contactHeight - 1 && window.innerWidth >= 800) {
+  if(landAnimComplete && $window.scrollTop() >= contactHeight - 1 && window.innerWidth >= mobileBreakpoint) {
     if($contact.outerHeight() <= window.innerHeight) {
       $navbar.css("background","none");
     } else {
@@ -271,7 +272,7 @@ function scrollHandler() {
     }
     $navbar.addClass("nav-end");
     navLogoClose();
-  } else if($window.scrollTop() >= navHeight && window.innerWidth >= 800) {
+  } else if($window.scrollTop() >= navHeight && window.innerWidth >= mobileBreakpoint) {
     $navbar.css("background","");
     $navbar.removeClass("nav-end");
     logoHover = false;
@@ -338,7 +339,7 @@ function scrollHandler() {
   } else {
     $about.children(".left").removeClass("left-fixed");
     $about.children(".right").removeClass("right-float");
-    if($window.scrollTop() + window.innerHeight >= $contact.offset().top && window.innerWidth >= 800) {
+    if($window.scrollTop() + window.innerHeight >= $contact.offset().top && window.innerWidth >= mobileBreakpoint) {
       $about.children(".left").css("top", $about.outerHeight() - $about.children(".left").outerHeight());
     } else {
       $about.children(".left").css("top", "");
