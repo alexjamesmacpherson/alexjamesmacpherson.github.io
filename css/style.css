@@ -77,11 +77,20 @@ a:active, .hover a:active {
 
 address {
   font-style: inherit;
+  margin: 1.3em 0;
 }
 
 .no-wrap {
   display: inline-block !important;
   white-space: nowrap;
+}
+
+address p {
+  margin: 0.25em 0;
+}
+
+address .no-wrap {
+  padding-left: 0.5em;
 }
 
 /* Mobile Portrait */
@@ -122,7 +131,7 @@ address {
   .left, .right {
     position: relative;
     width: calc(100% - 40px);
-    padding: 20px;
+    padding: 30px;
     font-size: 18px;
   }
 
@@ -183,7 +192,9 @@ address {
   }
 
   .left {
-    min-height: 260px;
+    height: 180px;
+    padding: 0;
+    width: 100%;
     font-weight: bold;
   }
 
@@ -214,21 +225,6 @@ address {
     -ms-transform: translate3d(0,40px,0) !important;
     transform: translate3d(0,40px,0) !important;
     opacity: 0;
-  }
-
-  img.emoji {
-    height: 1em;
-    width: 1em;
-    vertical-align: -0.1em;
-    margin: 0 .05em 0 .1em;
-  }
-
-  .link img.emoji {
-    vertical-align: -0.15em;
-  }
-
-  .first-el img.emoji {
-    margin: 0;
   }
 
   /* Landing Section */
@@ -438,19 +434,21 @@ address {
   }
 
   #about .section-title {
+    display: none;
     font-size: 70px;
     text-align: center;
     margin-top: -2vh;
   }
 
   #about .section-desc {
+    display: none;
     font-size: 19px;
     text-align: center;
     margin-top: -7px;
   }
 
   #about .first-el {
-    margin-top: 140px;
+    margin-top: 60px;
   }
 
   #about .first-el, #about .mid-el {
@@ -480,388 +478,6 @@ address {
     border: 10px solid #ddd;
   }
 
-  .friend {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    -webkit-filter: brightness(1.1);
-    filter: brightness(1.1);
-    margin: 1vw 3vw;
-    transition: filter 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    cursor: pointer;
-    box-shadow: inset 0 0 30px -7px #112;
-  }
-
-  .friend:hover {
-    -webkit-filter: brightness(1.3);
-    filter: brightness(1.3);
-  }
-
-  .friend a, .project-skill a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  #tk {
-    background: url("/img/tk.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #aaron {
-    background: url("/img/aaron.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #hamish {
-    background: url("/img/hamish.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  /* Projects Section */
-  #projects {
-  }
-
-  #projects .left {
-    color: #e14658;
-    background: #f5f5f5;
-    /*text-shadow: 0 0 30px #ff9faf;*/
-    -webkit-animation: glow 2.3s infinite;
-    animation: glow 2.3s infinite;
-    box-shadow: 80px 0 40px -97px #934;
-  }
-
-  #projects .right {
-    padding: 0;
-    width: 100%;
-  }
-
-  #projects .section-title {
-    font-size: 55px;
-    text-align: center;
-    margin-top: -2vh;
-  }
-
-  #projects .section-desc {
-    font-size: 25px;
-    text-align: center;
-    margin-top: -10px;
-  }
-
-  .project, .project-head {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-  }
-
-  .project {
-    height: auto;
-  }
-
-  .project-head {
-    cursor: pointer;
-    background: #22252c;
-  }
-
-  .project-head * {
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform: translate3d(0,0,0);
-    -webkit-backface-visibility: hidden;
-  }
-
-  .project-img {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    box-shadow: inset 0 25px 40px -30px #001;
-    -webkit-filter: brightness(0.8);
-    filter: brightness(0.8);
-    transition: filter 0.3s ease-in-out;
-  }
-
-  #cs310 .project-img {
-    background: url("/img/310.jpeg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #cs261 .project-img {
-    background: url("/img/261.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #sjb .project-img {
-    background: url("/img/sjb.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #fts .project-img {
-    background: url("/img/fts.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #old .project-img {
-    background: url("/img/old.jpeg") no-repeat center center;
-    background-size: cover;
-  }
-
-  #esport .project-img {
-    background: url("/img/esport.jpg") no-repeat center center;
-    background-size: cover;
-  }
-
-  .hover .project-head:hover .project-img {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
-  }
-
-  .hover .project-head:active .project-img {
-    -webkit-filter: brightness(0.4);
-    filter: brightness(0.4);
-    transition: filter 0.03s ease-in-out;
-  }
-
-  .project-head:active .project-img {
-    -webkit-filter: brightness(0.6);
-    filter: brightness(0.6);
-    transition: filter 0.03s ease-in-out;
-  }
-
-  .project-title, .project-more {
-    position: absolute;
-    color: #f5f5f5;
-    text-align: center;
-    font-family: 'Maven Pro', sans-serif;
-    text-shadow: 0 0 10px #201;
-    font-weight: bold;
-  }
-
-  .project-title {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-    color: #f5f5f5;
-    font-size: 35px;
-    width: calc(100% - 40px);
-    padding: 20px;
-    margin-top: -0.5vh;
-    line-height: 1.1em;
-  }
-
-  .project-more {
-    bottom: 15px;
-    width: 100%;
-    text-transform: uppercase;
-    line-height: 0.6em;
-    font-size: 16px;
-  }
-
-  .project-expand .project-more {
-    opacity: 0;
-  }
-
-  .project-title-text {
-    position: relative;
-  }
-
-  .project-body {
-    position: relative;
-    width: 100%;
-    color: #22252c;
-    background: #f5f5f5;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .project-text {
-    padding: 20px;
-    width: calc(100% - 40px);
-    box-shadow: inset 0 10px 20px -15px #934, inset 0 -10px 20px -15px #934;
-  }
-
-  .project-text-header {
-    text-align: center;
-  }
-
-  .project-highlight {
-    color: #e14658;
-    -webkit-animation: glow 2.3s infinite;
-    animation: glow 2.3s infinite;
-  }
-
-  .project-skills {
-    text-align: center;
-    width: 100%;
-  }
-
-  .project-skill {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    margin: 0 0.8vw;
-    transition: filter 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    cursor: pointer;
-  }
-
-  .hover .project-skill:hover {
-    webkit-filter: brightness(1.3);
-    filter: brightness(1.3);
-  }
-
-  .hover .project-skill:active, .project-skill:active {
-    transition: filter 0.03s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    webkit-filter: brightness(0.8);
-    filter: brightness(0.8);
-  }
-
-  .rails {
-    background: url("/img/rails.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .heroku {
-    background: url("/img/heroku.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .postgres {
-    background: url("/img/postgres.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .git {
-    background: url("/img/git.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .github {
-    background: url("/img/github.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .hover .github:hover {
-    webkit-filter: brightness(3);
-    filter: brightness(3);
-  }
-
-  .hover .github:active, .github:active {
-    webkit-filter: brightness(0.3);
-    filter: brightness(0.3);
-  }
-
-  .bootstrap {
-    background: url("/img/bootstrap.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .d3 {
-    background: url("/img/d3.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .django {
-    background: url("/img/django.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .hover .django:hover {
-    webkit-filter: brightness(2);
-    filter: brightness(2);
-  }
-
-  .hover .django:active, .django:active {
-    webkit-filter: brightness(0.7);
-    filter: brightness(0.7);
-  }
-
-  .jquery {
-    background: url("/img/jquery.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .responsive {
-    background: url("/img/responsive.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .php {
-    background: url("/img/php.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .html5 {
-    background: url("/img/html5.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .css3 {
-    background: url("/img/css3.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .spring {
-    background: url("/img/spring.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .gradle {
-    background: url("/img/gradle.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .mysql {
-    background: url("/img/mysql.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .ae {
-    background: url("/img/ae.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .cc {
-    background: url("/img/cc.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .ps {
-    background: url("/img/ps.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .ill {
-    background: url("/img/ill.png") no-repeat center center;
-    background-size: contain;
-  }
-
-  .project-inline-image {
-    width: 100%;
-    text-align: center;
-  }
-
-  #whiffers-logo svg, #whiffers-diff svg {
-    max-height: 300px;
-  }
-
-  .project-inline-image img {
-    height: auto;
-    width: auto;
-    max-height: 300px;
-    max-width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 0 20px -4px #934;
-  }
-
-  .no-shadow {
-    box-shadow: none !important;
-  }
-
-  .project-inline-image h3 {
-    margin: 0;
-  }
-
   /* Contact Section */
   #contact {
     z-index: 0;
@@ -876,282 +492,10 @@ address {
   }
 
   #contact .back-pic {
-    background: #1a1a1f url("/img/desk.jpg") no-repeat center center;
-    background-size: cover;
+    background: #1a1a1f url("/img/desk.jpg") no-repeat bottom center;
+    background-size: 300%;
     -webkit-filter: brightness(0.7);
     filter: brightness(0.7);
-  }
-
-  #contact .left {
-    min-height: auto;
-    padding: 70px 10px 10px 10px;
-    width: calc(100% - 20px);
-  }
-
-  #contact .left, #contact .right, #foot {
-    z-index: 2;
-  }
-
-  #contact .center {
-    position: relative;
-    top: 0;
-    left: 0;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-
-  #contact .section-title {
-    font-size: 55px;
-    text-align: center;
-    margin-top: -2vh;
-  }
-
-  #contact .section-desc {
-    font-size: 20px;
-    text-align: center;
-    margin: -8px 0 15px 0;
-  }
-
-  .contact-ps {
-    font-size: 18px;
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .contact-divider {
-    position: relative;
-    width: 180px;
-    height: 2px;
-    border-radius: 2px;
-    left: 50%;
-    -webkit-transform: translate3d(-50%,0,0);
-    -ms-transform: translate3d(-50%,0,0);
-    transform: translate3d(-50%,0,0);
-    background: #a4bbcc;
-    box-shadow: 0 0 10px #002;
-    opacity: 0.6;
-  }
-
-  .droppable .contact-divider {
-    width: 0;
-  }
-
-  .contact-cont {
-    position: relative;
-    font-size: 15px;
-    font-weight: normal;
-    width: 263px;
-    height: 190px;
-    padding: 0;
-    margin: 5px auto;
-  }
-
-  .contact-title, .contact-info {
-    float: left;
-    width: 201px;
-    margin: 10px 0 0 0;
-    text-shadow: 0 0 5px #201;
-    height: 20px;
-  }
-
-  .contact-push-left {
-    margin: 0 0 0 65px;
-  }
-
-  .contact-title {
-    width: 57px;
-    padding-right: 5px;
-    text-align: right;
-    color: #a4bbcc;
-  }
-
-  #contact a, #contact a:link, #contact a:visited, #contact a:hover, #contact a:active {
-    color:#f5f5f5;
-    -webkit-animation: none !important;
-    animation: none !important;
-    transition: color 0.5s ease-in-out;
-  }
-
-  .hover #contact a:hover {
-    color:#ff5678;
-    transition: color 0.2s ease-in-out;
-  }
-
-  .hover #contact a:active, #contact a:active {
-    transition: color 0.03s ease-in-out;
-    color:#ff1090;
-  }
-
-  input, textarea {
-    display: block;
-    background: none;
-    background: rgba(245,245,245,0.1);
-    box-shadow: none;
-    border: 2px solid #8899a6;
-    padding: 5px;
-    margin: 10px 0;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    text-shadow: 0 0 5px #201;
-    border-radius: 4px;
-    -webkit-appearance: none;
-    resize: none;
-    color: #f5f5f5;
-    transition: color 0.5s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-  }
-
-  .hover input:hover, .hover textarea:hover {
-    border: 2px solid #f5f5f5;
-    color: #fff;
-    transition: color 0.2s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-  }
-
-  input:focus, textarea:focus, .hover input:focus, .hover textarea:focus {
-    border: 2px solid #e14658;
-    background: rgba(245,245,245,0.3);
-    outline: none;
-  }
-
-  #in-name {
-    margin-top: -5px;
-  }
-
-  #in-name, #in-email, #in-message {
-    width: calc(100% - 14px);
-    max-width: calc(100% - 14px);
-  }
-
-  #in-submit {
-    background: rgba(225,70,88,0.3);
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 10px;
-    cursor: pointer;
-    margin: 25px auto 60px auto;
-    border: 2px solid #e14658;
-    width: 180px;
-  }
-
-  .hover #in-submit:hover {
-    background: #e14658;
-    border: 2px solid #e14658;
-    color: #fff;
-  }
-
-  #in-submit:active, .hover #in-submit:active {
-    transition: color 0.03s ease-in-out, background 0.03s ease-in-out, border 0.03s ease-in-out;
-    background: #ff1090;
-    border: 2px solid #ff1090;
-    color: #f5f5f5;
-  }
-
-  .in-error {
-    background: rgba(225,70,88,0.05);
-    border: 2px solid #e14658;
-  }
-
-  .hover .in-error:hover {
-    background: rgba(225,70,88,0.02);
-    border: 2px solid #ff533d;
-  }
-
-  input:disabled, textarea:disabled {
-    cursor: default !important;
-    color: #c5ddec !important;
-  }
-
-  .hover input:disabled:hover, .hover textarea:disabled:hover {
-    border: 2px solid #a4bbcc;
-  }
-
-  #in-submit:disabled {
-    color: #ffbebe !important;
-  }
-
-  #in-submit:disabled:hover {
-    background: rgba(225,70,88,0.3);
-  }
-
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #272c2f inset;
-    -webkit-text-fill-color: #f5f5f5 !important;
-    color: #f5f5f5 !important;
-  }
-
-  input:-webkit-autofill:disabled {
-    -webkit-box-shadow: 0 0 0px 1000px #2e3133 inset;
-    -webkit-text-fill-color: #c5ddec !important;
-    color: #c5ddec !important;
-  }
-
-  ::-webkit-input-placeholder {
-    color: #c5ddec;
-    text-shadow: none;
-    text-align: center;
-  }
-  :-moz-placeholder {
-    color: #c5ddec;
-    text-shadow: none;
-    text-align: center;
-  }
-  ::-moz-placeholder {
-    color: #c5ddec;
-    text-shadow: none;
-    text-align: center;
-  }
-  :-ms-input-placeholder {
-    color: #c5ddec;
-    text-shadow: none;
-    text-align: center;
-  }
-
-  .in-error::-webkit-input-placeholder {
-    color: #e14658;
-  }
-  .in-error:-moz-placeholder {
-    color: #e14658;
-  }
-  .in-error::-moz-placeholder {
-    color: #e14658;
-  }
-  .in-error:-ms-input-placeholder {
-    color: #e14658;
-  }
-
-  #in-message::-webkit-input-placeholder {
-    padding-top: 35px;
-  }
-  #in-message:-moz-placeholder {
-    line-height: 6.5em;
-  }
-  #in-message::-moz-placeholder {
-    padding-top: 6.5em;
-  }
-  #in-message:-ms-input-placeholder {
-    padding-top: 35px;
-  }
-
-  #in-message::-webkit-scrollbar {
-    width: 18px;
-    height: 18px;
-  }
-  #in-message::-webkit-scrollbar-thumb {
-    border: 7px solid rgba(0, 0, 0, 0);
-    background-clip: padding-box;
-    border-radius: 10px;
-    background-color: rgba(245,245,245,0.5);
-  }
-  #in-message::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(245,245,245,0.7);
-  }
-  #in-message::-webkit-scrollbar-button {
-    width: 0;
-    height: 0;
-    display: none;
-  }
-  #in-message::-webkit-scrollbar-corner {
-    background-color: transparent;
   }
 
   /* Footer */
@@ -1161,23 +505,24 @@ address {
     background: linear-gradient(to top, rgba(34,37,44,1), rgba(0,0,0,0));
     color: #e14658;
     text-align: center;
-    font-size: 7vw;
-    padding: 40px 20px;
+    font-size: 18px;
+    padding: 60px 20px;
     height: 100px;
     width: calc(100% - 40px);
+    z-index: 2;
     text-shadow:0 0 2vw #924;
     -webkit-animation: glow 1.5s infinite;
     animation: glow 1.5s infinite;
   }
 
   #foot-logo {
-    top: 40%;
-    height: 80%;
+    top: 45%;
+    height: 70%;
     width: 80%;
   }
 
   #foot-desc {
-    top: 83%;
+    top: 80%;
     height: auto;
     width: 100%;
     z-index: 10;
@@ -1196,22 +541,15 @@ address {
   #logo {
     top:42%;
   }
+
   #desc {
     top: calc(42% + 30vw);
     font-size: 8vw;
-  }
-
-  .project-head {
-    height: 40vh;
   }
 }
 
 /* Mobile Landscape/Desktop Small */
 @media screen and (min-width: 600px) { /* and (orientation: landscape) */
-  .left {
-    min-height: 300px;
-  }
-
   /* Navbar */
   #navbar {
     font-size: 18px;
@@ -1238,102 +576,13 @@ address {
     margin-top: -9px;
   }
 
-  #about .first-el {
-    margin-top: 150px;
-  }
-
-  .friend {
-    width: 140px;
-    height: 140px;
-    border-radius: 140px;
-  }
-
-  /* Projects Section */
-  #projects .section-title {
-    font-size: 70px;
-  }
-
-  #projects .section-desc {
-    font-size: 32px;
-    margin-top: -14px;
-  }
-
-  /* Contact Section */
-  #contact .section-title {
-    font-size: 70px;
-  }
-
-  #contact .section-desc {
-    font-size: 25px;
-    margin: -10px 0 20px 0;
-  }
-
-  .contact-ps {
-    margin-top: 20px;
-    font-size: 23px;
-  }
-
-  .contact-divider {
-    width: 210px;
-  }
-
-  .contact-cont {
-    font-size: 18px;
-    width: 330px;
-    padding: 10px;
-  }
-
-  .contact-title, .contact-info {
-    width: 240px;
-  }
-
-  .contact-push-left {
-    margin: 0 0 0 90px;
-  }
-
-  .contact-title {
-    width: 80px;
-    padding-right: 10px;
-  }
-
-  form {
-    margin: auto;
-    width: 80%;
-    position: relative;
-  }
-
-  input, textarea {
-    padding: 10px;
-    margin: 15px 0;
-  }
-
-  #in-name, #in-email, #in-message {
-    width: calc(100% - 24px);
-    max-width: calc(100% - 24px);
-  }
-
-  #in-submit {
-    font-size: 16px;
-    padding: 10px;
-    margin: 35px auto 60px auto;
-  }
-
-  #in-message::-webkit-input-placeholder {
-    padding-top: 40px;
-  }
-  #in-message:-moz-placeholder {
-    padding-top: 40px;
-  }
-  #in-message::-moz-placeholder {
-    padding-top: 40px;
-  }
-  #in-message:-ms-input-placeholder {
-    padding-top: 40px;
-  }
-
   /* Footer */
+  #contact .back-pic {
+    background-size: 200%;
+  }
+
   #foot {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 
@@ -1346,6 +595,7 @@ address {
   }
 
   .left {
+    height: initial;
     max-height: calc(100vh - 100px);
   }
 
@@ -1440,6 +690,14 @@ address {
   }
 
   /* About Section */
+  #about .section-title {
+    display: block;
+  }
+
+  #about .section-desc {
+    display: block;
+  }
+
   #about .first-el {
     margin-top: 180px;
   }
@@ -1462,90 +720,9 @@ address {
     padding-bottom: 100px;
   }
 
-  .friend {
-    width: 115px;
-    height: 115px;
-    border-radius: 115px;
-    margin: 0.5vw 1.5vw;
-  }
-
-  /* Projects Section */
-  #projects .left {
-    z-index: 4;
-  }
-
-  #projects .right {
-    width: 50%;
-  }
-
-  .project-head {
-    height: 100vh;
-  }
-
-  .project-title {
-    font-size: 50px;
-    width: calc(100% - 100px);
-    padding: 50px;
-    transition: margin 0.75s ease-in-out;
-  }
-
-  .project-expand .project-title {
-    margin-top: 2vh;
-  }
-
-  .project-more {
-    padding-bottom: 15px;
-    font-size: 20px;
-    -webkit-animation: bounce 3s infinite;
-    animation: bounce 3s infinite;
-    transition: opacity 0.75s ease-in-out;
-  }
-
-  .project-body {
-  }
-
-  .project-text {
-    padding: 20px 50px 40px 50px;
-    width: calc(100% - 100px);
-    min-height: 50vh;
-  }
-
   /* Contact Section */
   #contact .back-pic {
-    position: fixed;
-  }
-
-  #contact .left, #contact .right {
-    padding: 120px 0 20px 0;
-    width: 50%;
-    min-height: calc(100vh - 320px);
-    max-height: none;
-  }
-
-  #contact .center {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate3d(-50%,-50%,0);
-    -ms-transform: translate3d(-50%,-50%,0);
-    transform: translate3d(-50%,-50%,0);
-  }
-
-  #contact .right .center {
-    position: relative;
-  }
-
-  input, textarea {
-    margin: 20px 0;
-  }
-
-  #in-submit {
-    font-size: 18px;
-    padding: 15px;
-  }
-
-  #in-name {
-    margin-top: 1vw;
+    background-size: 150%;
   }
 }
 
@@ -1568,7 +745,6 @@ address {
   }
 
   .left {
-    min-height: 50vh;
     max-height: calc(100vh - 200px);
     width: calc(33% - 240px);
   }
@@ -1614,85 +790,9 @@ address {
     box-shadow: none;
   }
 
-  .friend {
-    width: 125px;
-    height: 125px;
-    border-radius: 125px;
-    margin: 20px 1.5vw 0 1.5vw;
-  }
-
-  /* Projects Section */
-  #projects .section-title {
-    font-size: 100px;
-  }
-
-  #projects .section-desc {
-    font-size: 46px;
-    margin-top: -17px;
-  }
-
-  .project-title {
-    font-size: 70px;
-    padding: 100px;
-    width: calc(100% - 200px);
-  }
-
-  .project-more {
-    padding-bottom: 20px;
-    font-size: 25px;
-  }
-
-  .project-text {
-    padding: 30px 120px 70px 120px;
-    width: calc(100% - 240px);
-  }
-
   /* Contact Section */
-  #contact .section-title {
-    font-size: 95px;
-  }
-
-  #contact .section-desc {
-    font-size: 33px;
-    margin: -15px 0 30px 0;
-  }
-
-  .contact-ps {
-    margin-top: 30px;
-    font-size: 31px;
-  }
-
-  .contact-divider {
-    width: 250px;
-  }
-
-  .contact-cont {
-    font-size: 21px;
-    width: 400px;
-    height: 200px;
-    padding: 20px;
-  }
-
-  .contact-title, .contact-info {
-    width: 300px;
-    height: 25px;
-  }
-
-  .contact-push-left {
-    margin: 0 0 0 100px;
-  }
-
-  .contact-title {
-    width: 90px;
-  }
-
-  form {
-    width: 70%;
-    left: -10%;
-  }
-
-  #in-name {
-    margin-top: 1.5vw;
+  #contact .back-pic {
+    background-size: 125%;
   }
 }
 
@@ -1706,6 +806,11 @@ address {
   #about .section-desc {
     font-size: 32px;
     margin-top: -14px;
+  }
+
+  /* Contact Section */
+  #contact .back-pic {
+    background-size: 105%;
   }
 }
 
