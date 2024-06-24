@@ -1563,6 +1563,10 @@ address {
     width: calc(67% - 240px);
   }
 
+  .right-float {
+    margin-left: 33%;
+  }
+
   .left {
     min-height: 50vh;
     max-height: calc(100vh - 200px);
