@@ -45,8 +45,8 @@ var $footDesc = $("#foot-desc");
 var $footText = $("#foot-typed");
 var footAnim = true;
 var footViews = 0;
-var byes = ["Cheerio then!", "Toodle pip!", "Until next time!", "Ta-ta for now!", "Be seeing you!", "Catch you next time!"];
-var cheers = ["Thanks for dropping by!", "Cheers for stopping over!", "Thanks for coming!"];
+var byes = ["Cheerio then!", "Toodle pip!", "Until next time!", "Ta-ta for now!", "Be seeing you!", "Catch you later!", "See you around!", "Later tater!", "Au revoir", "Adieu!", "À bientôt"];
+var cheers = ["Thanks for dropping by!", "Thanks for coming!", "Cheers for taking the time!", "Merci beaucoup!", "Merci bien!"];
 
 /* Start doing things */
 landingAnimation();
