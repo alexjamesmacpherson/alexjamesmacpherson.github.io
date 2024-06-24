@@ -256,7 +256,7 @@ function sizeSetter() {
   aboutHeight = Math.ceil($about.offset().top);
   contactHeight = Math.ceil($contact.offset().top);
   if(window.innerWidth >= mobileBreakpoint) {
-    dropPoint = (9 * $window.height() / 10);
+    dropPoint = $window.height() - 30;
   } else {
     dropPoint = $window.height();
   }
@@ -264,16 +264,10 @@ function sizeSetter() {
 }
 
 function scrollHandler() {
-  if(landAnimComplete && $window.scrollTop() >= contactHeight - 1 && window.innerWidth >= mobileBreakpoint) {
-    if($contact.outerHeight() <= window.innerHeight) {
-      $navbar.css("background","none");
-    } else {
-      $navbar.css("background","");
-    }
+  if(landAnimComplete && $window.scrollTop() + $window.innerHeight() >= contactHeight - 1 && window.innerWidth >= mobileBreakpoint) {
     $navbar.addClass("nav-end");
     navLogoClose();
   } else if($window.scrollTop() >= navHeight && window.innerWidth >= mobileBreakpoint) {
-    $navbar.css("background","");
     $navbar.removeClass("nav-end");
     logoHover = false;
     navLogoOpen();
@@ -287,7 +281,6 @@ function scrollHandler() {
       }, 300);
     }
   } else if($window.scrollTop() < navHeight) {
-    $navbar.css("background","");
     $navbar.removeClass("nav-end");
     $navbar.removeClass("fixed-fade");
     navLogoClose();
@@ -300,12 +293,11 @@ function scrollHandler() {
       }, 300);
     }
   } else {
-    $navbar.css("background","");
     $navbar.removeClass("nav-end");
   }
 
   if(!isScrolling) {
-    if($window.scrollTop() >= contactHeight - 1) {
+    if($window.scrollTop() + $window.innerHeight() >= contactHeight - 1) {
       $navLines.removeClass("nav-line-selected");
       $($navLines[2]).addClass("nav-line-selected");
     } else if($window.scrollTop() >= aboutHeight - fixedNav) {
@@ -401,11 +393,11 @@ function scrollToPage(pageNum) {
     switch(pageNum) {
       case 1: page = aboutHeight;
         break;
-      case 2: page = contactHeight;
+      case 2: page = contactHeight - $window.innerHeight();
         break;
     }
     $('html, body').animate({
-      scrollTop: page
+      scrollTop: page,
     }, scrollTime, "swing");
   }
 }
