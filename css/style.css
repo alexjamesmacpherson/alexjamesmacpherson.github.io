@@ -183,7 +183,7 @@ address {
   }
 
   .left {
-    min-height: 40vh;
+    min-height: 260px;
     font-weight: bold;
   }
 
@@ -1209,7 +1209,7 @@ address {
 /* Mobile Landscape/Desktop Small */
 @media screen and (min-width: 600px) { /* and (orientation: landscape) */
   .left {
-    min-height: 60vh;
+    min-height: 300px;
   }
 
   /* Navbar */
@@ -1338,7 +1338,7 @@ address {
 }
 
 /* Desktop Medium */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .left, .right {
     position: relative;
     padding: 50px;
@@ -1557,12 +1557,16 @@ address {
 
   .left, .right {
     padding: 100px 120px;
-    width: calc(50% - 240px);
+  }
+
+  .right {
+    width: calc(67% - 240px);
   }
 
   .left {
     min-height: 50vh;
     max-height: calc(100vh - 200px);
+    width: calc(33% - 240px);
   }
 
   .left-fixed {
@@ -1579,15 +1583,6 @@ address {
   }
 
   /* About Section */
-  #about .section-title {
-    font-size: 120px;
-  }
-
-  #about .section-desc {
-    font-size: 32px;
-    margin-top: -14px;
-  }
-
   #about .first-el {
     margin-top: 0;
   }
@@ -1694,6 +1689,19 @@ address {
 
   #in-name {
     margin-top: 1.5vw;
+  }
+}
+
+/* Desktop X-Large */
+@media screen and (min-width: 2000px) {
+  /* About Section */
+  #about .section-title {
+    font-size: 120px;
+  }
+
+  #about .section-desc {
+    font-size: 32px;
+    margin-top: -14px;
   }
 }
 
