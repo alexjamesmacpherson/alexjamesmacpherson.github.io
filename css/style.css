@@ -93,6 +93,58 @@ address .no-wrap {
   padding-left: 0.5em;
 }
 
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -0.25em;
+  margin-bottom: 0.5em;
+}
+
+.pill {
+  display: inline-block;
+  margin: 0 0.5em 0.5em 0;
+  padding: 2px 8px;
+  background: #ff533d;
+  border-radius: 16px;
+  color: #f5f5f5;
+  transition: background 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.pill:hover {
+  background: #ff2040;
+  transition: background 0.2s ease-in-out;
+}
+
+.pill-inverse {
+  color: #e14658;
+  background: #ffe2e2;
+}
+
+.pill-inverse:hover {
+  background: #ffd5d5;
+}
+
+.pill-dot {
+  position: relative;
+}
+
+.pill-dot::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 0 3px 1px;
+  border-radius: 10px;
+  background: #ff533d;
+}
+
+.pill-dot-inverse::after {
+  background: #ffe2e2;
+  box-shadow: 0 1px 2px #e14658;
+  margin-left: 2px;
+}
+
 /* Mobile Portrait */
 @media screen and (min-width: 300px)  {
   body {
@@ -135,7 +187,7 @@ address .no-wrap {
     font-size: 18px;
   }
 
-  .small-text {
+  .small-text, .pill {
     font-size: 14px;
   }
 
@@ -728,6 +780,10 @@ address .no-wrap {
 
 /* Desktop Large */
 @media screen and (min-width: 1400px) {
+  .pills {
+    max-width: 75%;
+  }
+
   .timeline {
     margin-left: 15px;
   }
@@ -798,6 +854,10 @@ address .no-wrap {
 
 /* Desktop X-Large */
 @media screen and (min-width: 2000px) {
+  .pills {
+    max-width: 66%;
+  }
+
   /* About Section */
   #about .section-title {
     font-size: 120px;
