@@ -263,23 +263,28 @@ function sizeSetter() {
   scrollHandler();
 }
 
+function setNavFixed() {
+  if(!$navbar.hasClass("nav-fixed")) {
+    $navbar.addClass("nav-fixed");
+    $navLines.css("height", "0");
+    setTimeout(function() {
+      $navLines.css("top", "0");
+      $navLines.css("height", "");
+      $navbar.addClass("fixed-fade");
+    }, 300);
+  }
+}
+
 function scrollHandler() {
   if(landAnimComplete && $window.scrollTop() + $window.innerHeight() >= contactHeight - 1 && window.innerWidth >= mobileBreakpoint) {
     $navbar.addClass("nav-end");
     navLogoClose();
+    setNavFixed();
   } else if($window.scrollTop() >= navHeight && window.innerWidth >= mobileBreakpoint) {
     $navbar.removeClass("nav-end");
     logoHover = false;
     navLogoOpen();
-    if(!$navbar.hasClass("nav-fixed")) {
-      $navbar.addClass("nav-fixed");
-      $navLines.css("height", "0");
-      setTimeout(function() {
-        $navLines.css("top", "0");
-        $navLines.css("height", "");
-        $navbar.addClass("fixed-fade");
-      }, 300);
-    }
+    setNavFixed();
   } else if($window.scrollTop() < navHeight) {
     $navbar.removeClass("nav-end");
     $navbar.removeClass("fixed-fade");
