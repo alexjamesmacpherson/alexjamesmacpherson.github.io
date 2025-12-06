@@ -182,7 +182,7 @@ function drawText() {
   setTimeout(function() {
     $landDesc.removeClass("smooth-text");
     $landText.typed({
-      strings: ["^250 Alex Macpherson", "^250 Technical Lead", "^250 Full-Stack Engineer", "^250 Vice President"],
+      strings: ["^250 Alex Macpherson", "^250 Technical Lead", "^250 Full-Stack Engineer"],
       typeSpeed: 50,
       startDelay: 1500,
       backSpeed: 25,
