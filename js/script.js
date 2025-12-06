@@ -48,6 +48,9 @@ var footViews = 0;
 var byes = ["Cheerio then!", "Toodle pip!", "Until next time!", "Ta-ta for now!", "Be seeing you!", "Catch you later!", "See you around!", "Later tater!", "Au revoir!", "Adieu!", "À bientôt!"];
 var cheers = ["Thanks for dropping by!", "Thanks for coming!", "Cheers for taking the time!", "Merci beaucoup!", "Merci bien!"];
 
+var $yoe = $(".yoe");
+var yoe = new Date().getFullYear() - new Date('2015-07-01').getFullYear();
+
 /* Start doing things */
 landingAnimation();
 sizeSetter();
@@ -60,6 +63,9 @@ $(window).on("load", function() {
   if(animReady) {
     drawNav();
   }
+
+  /* Set years of experience */
+  $yoe.text(`${yoe}+`);
 
   /* Nav button scrolling */
   $($navButs[0]).click(function() {
@@ -524,3 +530,5 @@ function dropHandler() {
     }
   });
 }
+
+
