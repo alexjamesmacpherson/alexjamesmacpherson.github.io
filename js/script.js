@@ -65,7 +65,6 @@ $(window).on("load", function() {
   }
 
   /* Set years of experience */
-  console.log('yeehaw');
   $yoe.text(`${yoe}+`);
 
   /* Nav button scrolling */
